@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayAnim : MonoBehaviour
-{
+{        
+    public bool active = false;
+
     private void OnMouseDown()
     {
+        active = true;
         GetComponent<Animator>().SetBool("IsClicked", true);
         StartCoroutine(Example());
     }
